@@ -22,82 +22,8 @@ class _DocumentsScreenState extends State<DocumentsScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Color(0XFFFFAFAFA),
-      //   elevation: 3,
-      //   actions: [
-      //     Container(
-      //       height: 25.h,
-      //       width: 25.w,
-      //       decoration: BoxDecoration(
-      //           color: Color(0xfffFFFFFF),
-      //           borderRadius: BorderRadius.circular(100)),
-      //       child: Center(
-      //           child: Text(
-      //         "5",
-      //         style: TextStyle(
-      //             fontSize: 14,
-      //             fontWeight: FontWeight.w600,
-      //             color: Color(0XFFFA3A3A3)),
-      //       )),
-      //     ),
-      //     InkWell(
-      //       onTap: () {
-      //         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-      //           return NotificationsWidget();
-      //         }));
-      //       },
-      //       child: Padding(
-      //         padding: const EdgeInsets.only(right: 5, left: 5),
-      //         child: Container(
-      //           height: 32,
-      //           width: 30,
-      //           decoration: BoxDecoration(
-      //               image: DecorationImage(
-      //                   image: AssetImage(
-      //             "assets/image/bell-notification-social-media.png",
-      //           ))),
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      //   title: Text(
-      //     "WQ3LY",
-      //     style: TextStyle(
-      //       fontSize: 16,
-      //       fontWeight: FontWeight.w500,
-      //       color: Colors.black,
-      //     ),
-      //   ),
-      //   centerTitle: true,
-      //   leading: Padding(
-      //     padding: const EdgeInsets.all(8.0),
-      //     child: Container(
-      //       height: 20.h,
-      //       width: 20.w,
-      //       decoration: BoxDecoration(
-      //           color: Color(0xfffFFFFF),
-      //           borderRadius: BorderRadius.circular(100)),
-      //       child: Center(
-      //           child: Text(
-      //         "TK",
-      //         style: TextStyle(
-      //             fontSize: 16,
-      //             fontWeight: FontWeight.w600,
-      //             color: Color(0XFFFA3A3A3)),
-      //       )),
-      //     ),
-      //   ),
-      // ),
       body: Column(
         children: [
-          // Container(
-          //   height: 341.h,
-          //   width: 185.w,
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(16),
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
             child: Container(
@@ -756,9 +682,7 @@ class _DocumentsScreenState extends State<DocumentsScreen> {
                   height: 40.h,
                   width: 80.w,
                   decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(0xfffE5E5E5),
-                      ),
+                      border: Border.all(color: Color(0XFFF737373)),
                       borderRadius: BorderRadius.circular(7)),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0),
@@ -790,19 +714,25 @@ class _DocumentsScreenState extends State<DocumentsScreen> {
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Image.asset("assets/icon/left-chevron.png"),
+                  child: Image.asset("assets/icon/left-chevron.png",
+                      color: Color(0XFFF737373)),
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Image.asset("assets/icon/left-chevron (1).png"),
+                  child: Image.asset("assets/icon/left-chevron (1).png",
+                      color: Color(0XFFF737373)),
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Image.asset("assets/icon/right-chevron.png"),
+                  child: Image.asset(
+                    "assets/icon/right-chevron.png",
+                    color: Color(0XFFF737373),
+                  ),
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Image.asset("assets/icon/right-chevron (1).png"),
+                  child: Image.asset("assets/icon/right-chevron (1).png",
+                      color: Color(0XFFF737373)),
                 ),
               ],
             ),

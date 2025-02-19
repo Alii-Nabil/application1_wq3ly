@@ -1,3 +1,4 @@
+import 'package:application_wq3ly/screen/signature_disclosure.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +12,7 @@ class CompleteDocumentScreen extends StatelessWidget {
         child: Scaffold(
       body: Center(
         child: Container(
-          height: 360,
+          height: 400,
           width: 340,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -23,6 +24,7 @@ class CompleteDocumentScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Complete document",
@@ -31,6 +33,9 @@ class CompleteDocumentScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
+                ),
+                SizedBox(
+                  height: 10.h,
                 ),
                 Text(
                   "You are about to complete signing IV.1_inf.....logy.pdf. Are you sure?",
@@ -50,6 +55,9 @@ class CompleteDocumentScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: Color(0xfffA3A3A3),
                   ),
+                ),
+                SizedBox(
+                  height: 10.h,
                 ),
                 Text(
                   "signature disclosure",
@@ -92,7 +100,7 @@ class CompleteDocumentScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
-                          return CompleteDocumentScreen();
+                          return SignatureDisclosure();
                         }));
                       },
                       child: Container(

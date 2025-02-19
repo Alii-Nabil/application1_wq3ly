@@ -1,5 +1,10 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:application_wq3ly/screen/complete_document_screen.dart';
+import 'package:application_wq3ly/screen/new_templates_2.dart';
+import 'package:application_wq3ly/widget/add_placeholders_widget.dart';
 import 'package:application_wq3ly/widget/advancedoptions_widget.dart';
+import 'package:application_wq3ly/widget/creat_direct_link_widget.dart';
 
 import 'package:application_wq3ly/widget/textefieldoptions_widget.dart';
 import 'package:application_wq3ly/widget/texxtfield_login.dart';
@@ -88,41 +93,7 @@ class _TemplatesScreenState extends State<TemplatesScreen> {
                       ],
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      // Navigator.of(context)
-                      //     .push(MaterialPageRoute(builder: (context) {
-                      //   return CompleteDocumentScreen();
-                      // }));
-                    },
-                    child: Container(
-                        height: 35.h,
-                        width: 145,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color(0xfffFFFFFF),
-                            border: Border.all(
-                              color: Color(0xfffA8A8A8),
-                              width: 0.5.w,
-                            )),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Image.asset("assets/icon/link.png"),
-                              Text(
-                                " Create Direct Link",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  )
+                  CreatDirectLinkWidget(),
                 ],
               ),
               SizedBox(
@@ -363,7 +334,12 @@ class _TemplatesScreenState extends State<TemplatesScreen> {
                                         )),
                                   ),
                                   InkWell(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(builder: (context) {
+                                        return AddPlaceholdersWidget();
+                                      }));
+                                    },
                                     child: Container(
                                         height: 55.h,
                                         width: 145,
@@ -398,8 +374,7 @@ class _TemplatesScreenState extends State<TemplatesScreen> {
                     children: [
                       Container(
                         child: AnimatedContainer(
-                            duration:
-                                Duration(milliseconds: 300), // مدة التغيير
+                            duration: Duration(milliseconds: 300),
                             height: _height,
                             width: _width,
                             decoration: BoxDecoration(

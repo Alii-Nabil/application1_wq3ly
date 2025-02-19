@@ -4,15 +4,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
-  Future<dynamic> get({required String url,@required String? token,}) async {
-     Map<String, String> headers = {};
+  Future<dynamic> get({
+    required String url,
+    @required String? token,
+  }) async {
+    Map<String, String> headers = {};
     if (token != null) {
       headers.addAll({
-        'Authorization': 'Bearer $token', 
+        'Authorization': 'Bearer $token',
         'Content-Type': 'application/json',
       });
     }
-    http.Response response = await http.get(Uri.parse(url),headers: headers );
+    http.Response response = await http.get(Uri.parse(url), headers: headers);
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
@@ -30,7 +33,7 @@ class Api {
     Map<String, String> headers = {};
     if (token != null) {
       headers.addAll({
-        'Authorization': 'Bearer $token', 
+        'Authorization': 'Bearer $token',
         'Content-Type': 'application/json',
       });
     }
@@ -46,18 +49,19 @@ class Api {
     }
   }
 
-
-   Future<dynamic> patch({
+  Future<dynamic> patch({
     required String Url,
     @required dynamic body,
     @required String? token,
     required Map<String, String> headers,
   }) async {
     Map<String, String> headers = {};
-    headers.addAll({'Content-Type': 'application/json',});
+    headers.addAll({
+      'Content-Type': 'application/json',
+    });
     if (token != null) {
       headers.addAll({
-        'Authorization': 'Bearer $token', 
+        'Authorization': 'Bearer $token',
         'Content-Type': 'application/json',
       });
     }

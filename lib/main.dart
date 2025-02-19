@@ -8,7 +8,6 @@ import 'package:application_wq3ly/screen/onboarding_screen1.dart';
 import 'package:application_wq3ly/screen/onboarding_screen2.dart';
 import 'package:application_wq3ly/screen/username_screen.dart';
 import 'package:application_wq3ly/screen/welcome.dart';
-import 'package:application_wq3ly/test1.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
